@@ -5,6 +5,7 @@
 
   Algoritmos de busca binária consistem em uma série de instruções para pesquisa de um item em um conjunto de itens a partir da divisão do conjunto de itens em subconjuntos.
   O objetivo é dividir o conjunto de itens pela metade e descartar metade desses itens até achar o item pesquisado ou descartar todos os dados e concluir que o item não faz parte do conjunto.
+  Só é possível fazer uma busca binária em uma lista ordenada.
 
   Por exemplo, ao pesquisar uma palavra em um dicionário. O primeiro passo seria abrir o dicionário ao meio e verificar se a palavra se encontra naquela página.
   Caso contrário, verificar se a palavra pesquisada se encontra na metada anterior ou posterior do dicionário. 

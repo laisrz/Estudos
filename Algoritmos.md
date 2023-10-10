@@ -110,6 +110,17 @@ Por exemplo, é possível utilizar um modelo híbrido de array e listas, em que 
   * Quando uma função é chamada dentro de outra função, ela fica "empilhada" em cima da função anterior.
   * Conforme as funções retornam, elas são retiradas da call stack.
   * Muitas funções em processamento podem ocupar muita memória.
+
+  ### Algoritmo de binary search com recursão
+
+      def search(x, list):
+        mid = (len(list) - 1)// 2
+        if x == list[mid]:
+            return x
+        elif x > list[mid]:
+            return search(x, list[mid+1 :])
+        else:
+            return search(x, list[: mid-1])
     
 
 

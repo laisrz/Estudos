@@ -94,6 +94,22 @@ Por exemplo, é possível utilizar um modelo híbrido de array e listas, em que 
                 smallest = findSmallest(arr)
                 newArr.append(arr.pop(smallest))
             return newArr
+
+  ## Recursion
+
+  * Recursão é um mecanismo de programação em que uma função chama a si mesma.
+  * Para que a função não seja executada infinitamente, usa-se um base case.
+  * Base case: define quando a função deverá retornar
+  * Recursive case: define os termos em que a função deverá chamar a si mesma.
+  * Embora seja uma solução mais clara e elegante, ela não necessariamente trará ganhos de desempenho.
+  * Como todas as chamadas da função ficarão na pilha de chamadas até que se chegue ao base case, usar recursão consome bastante a memória.
+ 
+  ### Call Stack
+
+  * As funções, quando chamadas, vão para a call stack (pilha de chamadas).
+  * Quando uma função é chamada dentro de outra função, ela fica "empilhada" em cima da função anterior.
+  * Conforme as funções retornam, elas são retiradas da call stack.
+  * Muitas funções em processamento podem ocupar muita memória.
     
 
 

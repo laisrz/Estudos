@@ -166,7 +166,46 @@ Por exemplo, é possível utilizar um modelo híbrido de array e listas, em que 
   else:
       return search(x, list[: mid-1])
 ```
+## Quicksort
+* É um algoritmo de ordenação de elementos em um conjunto.
+* Como funciona:
+  1. Escolhe-se um elemento do conjunto (pode ser qualquer um) e compara-se esse elemento com os outros itens do conjunto
+  2. Se o item for menor ou igual o elemento escolhido, ele é colocado em um outra lista à esquerda.
+  3. Se o item for maior, ele é colocado em outra lista à direita.
+  4. Retorna-se a lista à esquerda + o elemento escolhido (pivot) + a lista à direita
+  5. Repete-se o processo, até que as listas tenham 1 ou nenhum elemento (base case - neste ponto, a lista está ordenada).
 
+```
+def quicksort(list):
+    list_left = []
+    list_right = []
+    list_pivot = []
+    if len(list) < 2:
+        return list
+    else:
+        pivot = list[0]
+        for i in list[1:]:
+            if i <= pivot:
+                list_left.append(i)
+            else:
+                list_right.append(i)
+        list_pivot.append(pivot)
+    
+    return quicksort(list_left) + list_pivot + quicksort(list_right)
+```
+## Quicksort Big O notation
+* Quicksort é um caso à parte, porque o Big O depende de qual elemento for escolhido (pivot).
+* Se o pivot for sempre escolhido de forma aleatória, estaremos diante do melhor cenário (que também é considerado o cenário mais comum), e nesse caso: O(n log n)
+* No pior cenário quicksort tem um O(n^2), mas seria o cenário mais raro.
+
+## Comparação entre Quicksort e Merge Sort
+* Merge sort tem um O(n log n).
+* Ou seja, merge é mais rápida que a quicksort no pior cenário o(n^2).
+* No entanto, quicksort em geral tem um desempenho do melhor cenário e nesse caso O(n log n), exatamente como a merge sort.
+* Só que a constante da quicksort é menor do que a constante da merge.
+* Em geral, se desconsidera o valor das constantes no cálculo do Big O, mas nesse caso, como ambas têm o mesmo Big O, a constante fará diferença.
+* Como a constante da quicksort é menor, ela terá um desempenho mais rápido que a merge sort.
+* Quicksort seria um dos algoritmos mais rápidos existentes, se considerarmos que na média, seu desempenho é como no melhor cenário.
 
 
 

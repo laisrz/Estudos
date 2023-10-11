@@ -193,7 +193,7 @@ def quicksort(list):
     
     return quicksort(list_left) + list_pivot + quicksort(list_right)
 ```
-### Quicksort Big O notation
+### Big O Notation
 * Quicksort é um caso à parte, porque o Big O depende de qual elemento for escolhido (pivot).
 * Se o pivot for sempre escolhido de forma aleatória, estaremos diante do melhor cenário (que também é considerado o cenário mais comum), e nesse caso: O(n log n)
 * No pior cenário quicksort tem um O(n^2), mas seria o cenário mais raro.
@@ -206,6 +206,29 @@ def quicksort(list):
 * Em geral, se desconsidera o valor das constantes no cálculo do Big O, mas nesse caso, como ambas têm o mesmo Big O, a constante fará diferença.
 * Como a constante da quicksort é menor, ela terá um desempenho mais rápido que a merge sort.
 * Quicksort seria um dos algoritmos mais rápidos existentes, se considerarmos que na média, seu desempenho é como no melhor cenário.
+
+## Hash Tables
+* Hash Table é a combinação de uma hash function com uma array.
+* Hash function transforma uma string (ou qualquer outro tipo de dado) em um número.
+* Principais requerimentos para uma boa hash function:
+  1. Consistência: a mesma string precisa sempre mapear para o mesmo número.
+  2. Diferentes strings devem mapear para diferentes números. De nada adianta a hash function retornar sempre o mesmo número.
+* Esse número pode, então, ser usado para indicar em qual index de uma array um valor correspondente à string deve ser armazenado, formando uma hash table (mapeia chaves e valores).
+* Python tem uma implementação de hash tables: dicionários
+* Casos de uso: cache, DNS resolution
+
+### Big O Notation
+
+```
+          Melhor cenário    Pior cenário
+Pesquisa    O(1)                O(n)
+Inserção    O(1)                O(n)
+Deleção     O(1)                O(n)
+```
+* Melhor cenário ocorre quando:
+  1. O fator de carregamento (load factor) é baixo, ou seja a relação entre o número de registros na tabela e o número de slots disponíveis é baixa. Um load factor > 0.7 = é melhor aumentar o número de slots disponíveis na tabela.
+  2. Hash function não provoca muitas colisões na tabela (ao devolver o mesmo número para várias strings diferentes, por ex).
+* No melhor cenário, hash tables performam melhor do que a busca simples(O(n)) e a busca binária(O(log n))
 
 
 

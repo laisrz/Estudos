@@ -37,42 +37,43 @@
 
     # Item doesn't exist
     return None
-  ### Binary Search Tree
+### Binary Search Tree
 
-  Uma árvore de busca binária (BST) é uma árvore em que todos os nós seguem as seguintes propriedades:
-    * A raiz tem o maior valor na subárvore esquerda;
-    * A raiz tem o menor valor na subárvore direita;
-    * Cada subárvore esquerda é formada por nós com valores menores que a raiz;
-    * Cada subárvore direita é formada por nós com valores maiores que a raiz.
+Uma árvore de busca binária (BST) é uma árvore em que todos os nós seguem as seguintes propriedades:
 
-  ![BST](img/bst.png)
+  * A raiz tem o maior valor na subárvore esquerda;
+  * A raiz tem o menor valor na subárvore direita;
+  * Cada subárvore esquerda é formada por nós com valores menores que a raiz;
+  * Cada subárvore direita é formada por nós com valores maiores que a raiz.
 
-  Vamos encontrar a maior chave na árvore que é menor que um determinado número `n`.
+![BST](img/bst.png)
 
-  Primeiro, vamos pensar na BST. A maior chave na árvore que é menor que `n` é o nó mais à direita na subárvore esquerda de `n`.
+Vamos encontrar a maior chave na árvore que é menor que um determinado número `n`.
 
-  ```python
-  func FindLargestSmallerKey(rootNode *Node, num int) int {
-    largestSmaller := -1
+Primeiro, vamos pensar na BST. A maior chave na árvore que é menor que `n` é o nó mais à direita na subárvore esquerda de `n`.
 
-    node := rootNode
+```python
+func FindLargestSmallerKey(rootNode *Node, num int) int {
+  largestSmaller := -1
 
-    for node != nil {
-        if node.key < num {
-            largestSmaller = node.key
-            node = node.right
-        } else {
-            node = node.left
-        }
-    }
+  node := rootNode
 
-    return largestSmaller
+  for node != nil {
+      if node.key < num {
+          largestSmaller = node.key
+          node = node.right
+      } else {
+          node = node.left
+      }
   }
-  ```
 
-  Toda vez que vemos que a chave é menor que nosso n, começamos a encontrar nosso maior menor na subárvore direita;
-  Toda vez que vemos que a chave é maior que nosso n, começamos a encontrar nosso maior menor na subárvore esquerda;
-  Seguindo esse raciocínio, encontraremos a maior chave menor no nó mais à direita da subárvore esquerda sem compará-la com nenhuma chave anterior.
+  return largestSmaller
+}
+```
+
+Toda vez que vemos que a chave é menor que nosso n, começamos a encontrar nosso maior menor na subárvore direita;
+Toda vez que vemos que a chave é maior que nosso n, começamos a encontrar nosso maior menor na subárvore esquerda;
+Seguindo esse raciocínio, encontraremos a maior chave menor no nó mais à direita da subárvore esquerda sem compará-la com nenhuma chave anterior.
 
   ### Big O notation
 

@@ -45,7 +45,7 @@
     * Cada subárvore esquerda é formada por nós com valores menores que a raiz;
     * Cada subárvore direita é formada por nós com valores maiores que a raiz.
 
-  ![BST](image.png)
+  ![BST](img/bst.png)
 
   Vamos encontrar a maior chave na árvore que é menor que um determinado número `n`.
 

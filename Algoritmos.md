@@ -16,6 +16,7 @@
 
   Exemplo de algoritmo em Python:
 
+  ```
     # low and high keep track of which part of the list you'll search in.
     low = 0
     high = len(list) - 1
@@ -37,6 +38,7 @@
 
     # Item doesn't exist
     return None
+```
 ### Binary Search Tree
 
 Uma árvore de busca binária (BST) é uma árvore em que todos os nós seguem as seguintes propriedades:
@@ -91,11 +93,13 @@ Na array, os dados são armazenados de forma contígua. A vantagem é que isso p
 
 Já nas listas (linked lists), os dados não são armazenados de forma contígua, mas sim de acordo com o espaço livre de memória, e isso é feito ao armazenar junto com o dado o endereço do próximo item da lista. Isso permite que as inserções e deleções sejam rápidas, Big O(1), já que é só inserir o novo dado ao final da lista ou fazer com que um item aponte para outro endereço de memória para deletar itens. Mas a desvantagem é que a velocidade de leitura é menor do que nas arrays, porque as listas não permitem acesso aleatório. Assim, a velocidade de leitura tem Big O(n).
 
+  ```
     Velocidades de execução:
               Arrays    Listas
     Leitura    O(1)      O(n)
     Inserção   O(n)      O(1)
     Deleção    O(n)      O(1)
+```
 
 A partir de arrays e linked lists, é possível construir estruturas de dados mais complexas que permitem manipular um grande volume de dados com maior otimização em leitura, inserção e deleção.
 
@@ -110,6 +114,7 @@ Por exemplo, é possível utilizar um modelo híbrido de array e listas, em que 
 
   Exemplo de algoritmo em Python
 
+```
       * Para encontrar o menor valor em uma array:
         def findSmallest(arr):
             # Stores the smallest value
@@ -123,7 +128,7 @@ Por exemplo, é possível utilizar um modelo híbrido de array e listas, em que 
             return smallest_index
 
 
-        * Para ordenar a array:
+  * Para ordenar a array:
          def selectionSort(arr):
             newArr = []
             for i in range(len(arr)):
@@ -131,33 +136,38 @@ Por exemplo, é possível utilizar um modelo híbrido de array e listas, em que 
                 smallest = findSmallest(arr)
                 newArr.append(arr.pop(smallest))
             return newArr
+```
 
-  ## Recursion
+## Recursion
 
-  * Recursão é um mecanismo de programação em que uma função chama a si mesma.
-  * Para que a função não seja executada infinitamente, usa-se um base case.
-  * Base case: define quando a função deverá retornar
-  * Recursive case: define os termos em que a função deverá chamar a si mesma.
-  * Embora seja uma solução mais clara e elegante, ela não necessariamente trará ganhos de desempenho.
-  * Como todas as chamadas da função ficarão na pilha de chamadas até que se chegue ao base case, usar recursão consome bastante a memória.
+* Recursão é um mecanismo de programação em que uma função chama a si mesma.
+* Para que a função não seja executada infinitamente, usa-se um base case.
+* Base case: define quando a função deverá retornar
+* Recursive case: define os termos em que a função deverá chamar a si mesma.
+* Embora seja uma solução mais clara e elegante, ela não necessariamente trará ganhos de desempenho.
+* Como todas as chamadas da função ficarão na pilha de chamadas até que se chegue ao base case, usar recursão consome bastante a memória.
 
-  ### Call Stack
+### Call Stack
 
-  * As funções, quando chamadas, vão para a call stack (pilha de chamadas).
-  * Quando uma função é chamada dentro de outra função, ela fica "empilhada" em cima da função anterior.
-  * Conforme as funções retornam, elas são retiradas da call stack.
-  * Muitas funções em processamento podem ocupar muita memória.
+* As funções, quando chamadas, vão para a call stack (pilha de chamadas).
+* Quando uma função é chamada dentro de outra função, ela fica "empilhada" em cima da função anterior.
+* Conforme as funções retornam, elas são retiradas da call stack.
+* Muitas funções em processamento podem ocupar muita memória.
 
-  ### Algoritmo de binary search com recursão
+### Algoritmo de binary search com recursão
 
-      def search(x, list):
-        mid = (len(list) - 1)// 2
-        if x == list[mid]:
-            return x
-        elif x > list[mid]:
-            return search(x, list[mid+1 :])
-        else:
-            return search(x, list[: mid-1])
+```
+  def search(x, list):
+  mid = (len(list) - 1)// 2
+  if x == list[mid]:
+      return x
+  elif x > list[mid]:
+      return search(x, list[mid+1 :])
+  else:
+      return search(x, list[: mid-1])
+```
+
+
 
 
 

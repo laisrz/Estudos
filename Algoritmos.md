@@ -193,12 +193,12 @@ def quicksort(list):
     
     return quicksort(list_left) + list_pivot + quicksort(list_right)
 ```
-## Quicksort Big O notation
+### Quicksort Big O notation
 * Quicksort é um caso à parte, porque o Big O depende de qual elemento for escolhido (pivot).
 * Se o pivot for sempre escolhido de forma aleatória, estaremos diante do melhor cenário (que também é considerado o cenário mais comum), e nesse caso: O(n log n)
 * No pior cenário quicksort tem um O(n^2), mas seria o cenário mais raro.
 
-## Comparação entre Quicksort e Merge Sort
+### Comparação entre Quicksort e Merge Sort
 * Merge sort tem um O(n log n).
 * Ou seja, merge é mais rápida que a quicksort no pior cenário o(n^2).
 * No entanto, quicksort em geral tem um desempenho do melhor cenário e nesse caso O(n log n), exatamente como a merge sort.

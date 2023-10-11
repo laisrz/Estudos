@@ -71,9 +71,9 @@ func FindLargestSmallerKey(rootNode *Node, num int) int {
 }
 ```
 
-Toda vez que vemos que a chave é menor que nosso n, começamos a encontrar nosso maior menor na subárvore direita;
-Toda vez que vemos que a chave é maior que nosso n, começamos a encontrar nosso maior menor na subárvore esquerda;
-Seguindo esse raciocínio, encontraremos a maior chave menor no nó mais à direita da subárvore esquerda sem compará-la com nenhuma chave anterior.
+* Toda vez que vemos que a chave é menor que nosso n, começamos a encontrar nosso maior menor na subárvore direita;
+* Toda vez que vemos que a chave é maior que nosso n, começamos a encontrar nosso maior menor na subárvore esquerda;
+* Seguindo esse raciocínio, encontraremos a maior chave menor no nó mais à direita da subárvore esquerda sem compará-la com nenhuma chave anterior.
 
   ### Big O notation
 

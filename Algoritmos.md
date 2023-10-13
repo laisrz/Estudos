@@ -230,9 +230,63 @@ Deleção     O(1)                O(n)
   2. Hash function não provoca muitas colisões na tabela (ao devolver o mesmo número para várias strings diferentes, por ex).
 * No melhor cenário, hash tables performam melhor do que a busca simples(O(n)) e a busca binária(O(log n))
 
+## Breadth-first Search
+* É um algoritmo que permite fazer buscas em grafos.
+* Grafos modelam um conjunto de conexões. Ele é composto de vértices (nodes) e arestas (edges). Um vértice pode estar ligado a diversos outros vértices diretamente.
+* Os grafos também devem estar ordenados em queues (filas).
+* Queues são FIFO (First In First Out), ou seja, o elemento que entrou primeiro, sai primeiro.
+* Stacks são LIFO (Last In First Out), ou seja, o elemento que entrou por último é o primeiro a sair.
+* Breadth-first search responde às perguntas "Existe um caminho para X?" e "Qual é o caminho mais curto para X?"
+* Para aplicá-lo é preciso primeiro implementar um grafo. Em Python pode-se implementar um grafo com dicionários, que mapeia o relacionamento entre os vértices (nodes).
+* O grafo deve ser ordenado em uma fila, para então a busca poder ser realizada.
+* Os vértices serão analisados de acordo com sua ordem na fila (todos os vértices de primeiro grau primeiro, depois os de segundo grau, etc).
+* Se um vértice é descartado, todos os vértices que se relacionam com este são adicionados à fila.
+* No entanto, é preciso controlar se um vértice já foi pesquisado, para que a busca não entre em um loop infinito. Por isso, vértices já pesquisados não devem ser pesquisados novamente.
+* Undirected graph vs Directed graph:
+  1. Directed graphs: têm setas, e o relacionamento segue a direção da seta (A deve dinheiro a B).
+  2. Undirected graphs: não têm setas, e o relacionamento funciona em ambos os sentidos.
 
+### Big O Notation
+* O(V + E) = número de vértices (V) + número de arestas, ou edges (E).
 
+### Algoritmo
+```
+# Search if a person is a mango seller
+from collections import deque
 
+def person_is_seller(name):
+      return name[-1] == 'm'
+
+graph = {}
+graph["you"] = ["alice", "bob", "claire"]
+graph["bob"] = ["anuj", "peggy"]
+graph["alice"] = ["peggy"]
+graph["claire"] = ["thom", "jonny"]
+graph["anuj"] = []
+graph["peggy"] = []
+graph["thom"] = []
+graph["jonny"] = []
+
+def search(name):
+    search_queue = deque()
+    search_queue += [name]
+    # This is how you keep track of which people you've searched before.
+    searched = set()
+    while search_queue:
+        person = search_queue.popleft()
+        # Only search this person if you haven't already searched them.
+        if person in searched:
+            continue
+        if person_is_seller(person):
+            print(person + " is a mango seller!")
+            return True
+        search_queue += graph[person]
+        # Marks this person as searched
+        searched.add(person)
+    return False
+
+search("you")
+```
 
 
 

@@ -289,7 +289,11 @@ search("you")
 ```
 
 ## Algoritmo de Dijkstra
-
+* Algoritmo usado para calcular o "caminho" mais rápido quando as arestas têm peso.
+* Na breadth-first search o cálculo é feito sobre arestas sem peso, e o caminho mais curto é considerado o que envolve menos nós.
+* No caso do algortimo de Dijkstra o peso dos nós é levado em conta.
+* Isso é importante para calcular, por ex, o caminho mais rápido entre duas localidades, considerando as distâncias entre os nós e não apenas a quantidade de nós.
+* Ele não funciona se as arestas tiverem peso negativo (use o algoritmo Bellman-Ford nesse caso).
 
 
 

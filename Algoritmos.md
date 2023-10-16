@@ -315,7 +315,18 @@ search("you")
 * São problemas que não têm uma solução que seja rápida.
 * Ex: problema do caixeiro-viajante: como encontrar a rota mais rápida entre diferentes cidades? É um problema que só pode ser resolvido calculando todas as rotas individualmente para depois encontrar a mais rápida. E o número de rotas a serem calculadas é uma função fatorial: n! (sendo n o número de cidades a serem visitadas). Conforme o número de cidades cresce, o número de rotas a serem calculadas cresce fatorialmente. Por isso, a solução para esse problema, conforme o número de cidades cresce, pode demorar muito tempo ou se tornar inviável de ser calculada. Assim, usa-se um algoritmo de aproximação, como um greedy algorithm, para calcular a solução ideal mais aproximada.
 
+## Programação dinâmica
+* Usada quando é preciso optimizar uma solução dada alguma restrição.
+* Exemplo: qual os itens que você deveria levar numa mochila, considerando que se quer levar os itens que somam o maior valor e que o tamanho da mochila é uma restrição.
+* Para utilizar a programação dinâmica dividimos o problema em sub-problemas.
+* Não é possível utilizá-la:
+  1. Se os sub-problemas dependerem uns dos outros.
+  2. Se você estiver considerando frações de um item.
+* Para resolver o problema, deve-se usar uma tabela.
+* Não existe uma única fórmula para calcular uma solução para programação dinâmica.
 
+
+ 
 
 
 

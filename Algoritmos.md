@@ -295,6 +295,25 @@ search("you")
 * Isso é importante para calcular, por ex, o caminho mais rápido entre duas localidades, considerando as distâncias entre os nós e não apenas a quantidade de nós.
 * Ele não funciona se as arestas tiverem peso negativo (use o algoritmo Bellman-Ford nesse caso).
 
+## Greedy algorithms
+* Algoritmo simples: a cada passo, escolha o caminho com melhor desempenho/ideal.
+* Ex: escolher a maior quantidade de aulas que podem ser dadas em uma só classe. Ou a quantidade de caixas de diferentes tamanhos que cabem em um caminhão. Ou os itens de maior valor que cabem dentro de uma sacola.
+* A cada passo, escolhe-se a opção mais localmente ideal, para que se termine com a opção mais globalmente ideal.
+* Exemplo: como escolher em quais estações de rádio transmitir um programa, de forma a ter a maior cobertura com o menor número de estações?
+  1. Escolha a estação que transmita para o maior número de localidades possível, que não tenham sido contempladas anteriormente.
+  2. Repita o processo até que todas as localidades tenham sido esgotadas.
+
+### Algoritmos de aproximação
+* Quando um problema exige uma solução que leve muito tempo para ser calculada, pode-se recorrer a um algoritmo de aproximação.
+* Ele não provém a solução completa para o problema, mas sim uma aproximação boa o suficiente. São também mais rápidos do que a solução completa.
+* Algortimos de aproximação são julgados de acordo com:
+  1. Rapidez com que a solução é alcançada.
+  2. Quão próxima sua solução está da solução ideal.
+* Greedy algorithms podem ser usados como algoritmos de aproximação.
+
+### Problemas NP-completos
+* São problemas que não têm uma solução que seja rápida.
+* Ex: problema do caixeiro-viajante: como encontrar a rota mais rápida entre diferentes cidades? É um problema que só pode ser resolvido calculando todas as rotas individualmente para depois encontrar a mais rápida. E o número de rotas a serem calculadas é uma função fatorial: n! (sendo n o número de cidades a serem visitadas). Conforme o número de cidades cresce, o número de rotas a serem calculadas cresce fatorialmente. Por isso, a solução para esse problema, conforme o número de cidades cresce, pode demorar muito tempo ou se tornar inviável de ser calculada. Assim, usa-se um algoritmo de aproximação, como um greedy algorithm, para calcular a solução ideal mais aproximada.
 
 
 

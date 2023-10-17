@@ -82,7 +82,7 @@ func FindLargestSmallerKey(rootNode *Node, num int) int {
   Big O notation refere-se ao número de operações que um determinado algoritmo terá que fazer no pior cenário possível até solucionar o problema.
   No caso da busca binária, O(log n).
   Isso significa que em um conjunto de tamanho (n), o número de operações necessárias no pior caso possível para encontrar a solução é de log n.
-  Quanto maior a base de dados, então, melhor a performance da busca binária em relaçãoo à busca simples.
+  Quanto maior a base de dados, então, melhor a performance da busca binária em relação à busca simples.
   A busca simples tem um Big O(n), o que significa que o número de operações, no pior cenário, equivale ao tamanho da base de dados (n).
   * Busca binária tem um Big O(log n)
 

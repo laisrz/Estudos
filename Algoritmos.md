@@ -325,7 +325,20 @@ search("you")
 * Para resolver o problema, deve-se usar uma tabela.
 * Não existe uma única fórmula para calcular uma solução para programação dinâmica.
 
+## K-vizinhos mais próximos
+* É um algoritmo usado para classificação ou regressão de dados.
 
+### Classificação de dados usando KNN (K-nearest neighbors)
+* Como funciona:
+  1. Para classificar um dado, escolhas alguma(s) características deste e de outros com os quais você deseja comparar e coloque num gráfico.
+  2. Olhe para os vizinhos desse dado.
+  3. Classifique de acordo com seus vizinhos mais próximos.
+* Parte importante desse algoritmo é escolher as características mais importantes, que darão o resultando mais relevante para a categoria que se deseja classificar.
+* Uma vez escolhidas as características, e quantificadas para cada um dos dados, pode-se calcular os vizinhos mais próximos de acordo com a distância entre eles:
+  1. Para isso usa-se a fórmula de Pitágoras: √(x1 - x2)^2 + (y1-y2)^2)
+  2. Pode-se usar um conjunto de k números, ao invés de apenas 2, e a fórmula continua a mesma, apenas adicione a diferença entre a distância dos dois objetos e eleve ao quadrado.
+  3. Quanto menor o resultado, mais próximos são os vizinhos, ou seja, mais relevantes para a classificação.
+### Regressão de dados usando KKN
  
 
 

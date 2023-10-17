@@ -200,7 +200,7 @@ def quicksort(list):
 
 ### Comparação entre Quicksort e Merge Sort
 * Merge sort tem um O(n log n).
-* Ou seja, merge é mais rápida que a quicksort no pior cenário o(n^2).
+* Ou seja, merge é mais rápida que a quicksort no pior cenário O(n^2).
 * No entanto, quicksort em geral tem um desempenho do melhor cenário e nesse caso O(n log n), exatamente como a merge sort.
 * Só que a constante da quicksort é menor do que a constante da merge.
 * Em geral, se desconsidera o valor das constantes no cálculo do Big O, mas nesse caso, como ambas têm o mesmo Big O, a constante fará diferença.

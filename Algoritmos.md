@@ -339,7 +339,13 @@ search("you")
   2. Pode-se usar um conjunto de k números, ao invés de apenas 2, e a fórmula continua a mesma, apenas adicione a diferença entre a distância dos dois objetos e eleve ao quadrado.
   3. Quanto menor o resultado, mais próximos são os vizinhos, ou seja, mais relevantes para a classificação.
 ### Regressão de dados usando KKN
- 
+* Na regressão, há previsão de uma resposta.
+* Exemplo: em um serviço de streaming, prevê-se quantas estrelas um usuário dará para um filme, com base nos dados de seus KNN.
+* Como funciona:
+  1. Calcula-se quais são os vizinhos mais próximos do objeto que se quer fazer uma previsão.
+  2. Calcula-se a média dos valores que os vizinhos deram ao objeto que se está medindo.
+  3. Essa média será o valor previsto da resposta para o objeto que se está analisando.
+* Ex: Para saber qual será o valor da nota de um filme dado por um usuário, calcula-se quais são seus KNN. Sabendo quais os vizinhos mais próximos, calcula-se a média das notas que estes deram para este determinado filme. Esta será a nota prevista. 
 
 
 

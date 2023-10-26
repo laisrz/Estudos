@@ -27,7 +27,7 @@ def search(text, k):
     search_k = [x[0] for x in hash_table[:k]]
     return search_k
 ```
-### Complexidade de tempo: O(n)
+### Complexidade de tempo: O(nlogn)
 A complexidade de tempo é equivalente à maior complexidade de tempo executada pelo algoritmo. Nesse caso, é O(nlogn) porque é a complexidade da função sorted().
 
 ### Complexidade de espaço: O(n)

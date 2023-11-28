@@ -347,6 +347,16 @@ search("you")
   3. Essa média será o valor previsto da resposta para o objeto que se está analisando.
 * Ex: Para saber qual será o valor da nota de um filme dado por um usuário, calcula-se quais são seus KNN. Sabendo quais os vizinhos mais próximos, calcula-se a média das notas que estes deram para este determinado filme. Esta será a nota prevista. 
 
+# Data Structures and Algorithms
+* Bibliografia: A common-sense guide to Data Structures and Algorithms" - Jay Wengrow
+
+## Measuring Speed
+* Lembrar que a medição de velocidade se dá contando o número de passos (steps) um algoritmo leva para ser executado, e não seu tempo de execução. Isso porque o tempo de execução de um algoritmo poderá variar enormemente dependendo do hardware em que é executado. Já o número de passos é sempre o mesmo, o que permite comparar a velocidade de execução de algoritmos diferentes.
+
+## Arrays
+### Time complexity of reading: 1 step
+* A memória do computador, ao alocar um espaço para uma array, grava o endereço do primeiro elemento dessa array
+* Assim, somente um passo é preciso para que o computador acesse qualquer elemento de uma array, porque ele apenas precisa somar o index ao endereço do primeiro elemento da array (já que os endereços são números sequenciais), e ele retornará o elemento requisitado.
 
 
 
